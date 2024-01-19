@@ -7,7 +7,7 @@ function App() {
   // Function to fetch data from the server
   const fetchData = async () => {
     try {
-      const response = await fetch('https://wild-cyan-bream.cyclic.app/api/koyana');
+      const response = await fetch('https://ill-plum-frog-robe.cyclic.app/api/yash');
       const jsonData = await response.json();
 
       // Update state with the fetched data
@@ -19,12 +19,12 @@ function App() {
 
   return (
     <div>
-      <h1>React App with Button</h1>
+      <h1>FRONTEND React Application</h1>
       <button onClick={fetchData}>Fetch Data</button>
       
       {data && (
         <div>
-          <h2>Fetched Data:</h2>
+          <h2>Response From Backend Server:</h2>
           <pre>{JSON.stringify(data, null, 2)}</pre>
         </div>
       )}
