@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import Plotly from 'plotly';
 
 function App() {
   // State to store the fetched data
   const [data, setData] = useState(null);
+  const layout = {title:"World Wide Wine Production"};
 
   // Function to fetch data from the server
   const fetchData = async () => {
@@ -22,12 +24,12 @@ function App() {
       <h1>FRONTEND React Application</h1>
       <button onClick={fetchData}>Fetch Data</button>
       
-      {data && (
+      
         <div>
           <h2>Response From Backend Server:</h2>
-          <pre>{JSON.stringify(data, null, 2)}</pre>
+          Plotly.newPlot("myPlot", Data, layout);
         </div>
-      )}
+      
     </div>
   );
 }
