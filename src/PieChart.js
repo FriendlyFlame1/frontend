@@ -9,7 +9,7 @@ const PieChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://ill-plum-frog-robe.cyclic.app/api/yash'); // Replace with your server URL
+        const response = await axios.get('https://ill-plum-frog-robe.cyclic.app/api/yash');
         setPieChartData({
           labels: response.data.labels,
           values: response.data.values,
@@ -51,8 +51,8 @@ const PieChart = () => {
           {
             labels: pieChartData.values,
             values: pieChartData.labels,
-            type: "bar",
-            orientation: "h"
+            type: 'bar',
+            orientation: 'h'
           },
         ]}
         layout={{ width: 400, height: 400, title: 'Pie Chart' }}
