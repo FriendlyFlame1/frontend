@@ -24,7 +24,7 @@ const PieChart = () => {
 
   return (
     <div>
-      <h2>Pie Chart</h2>
+
       <Plot
         data={[
           {
@@ -49,10 +49,11 @@ const PieChart = () => {
         <Plot
         data={[
           {
-            labels: pieChartData.values,
-            values: pieChartData.labels,
+            x: pieChartData.values,
+            y: pieChartData.labels,
             type: 'bar',
-            orientation: 'h'
+            orientation: 'h',
+            marker: {color:"rgba(255,0,0,0.6)"}
           },
         ]}
         layout={{ width: 400, height: 400, title: 'Pie Chart' }}
