@@ -49,8 +49,8 @@ const PieChart = () => {
         <Plot
         data={[
           {
-            labels: pieChartData.labels,
-            values: pieChartData.values,
+            labels: pieChartData.values,
+            values: pieChartData.labels,
             type: "bar",
             orientation: "h"
           },
