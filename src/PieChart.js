@@ -46,6 +46,18 @@ const PieChart = () => {
       ]}
       layout={{ width: 400, height: 400, title: 'Pie Chart' }}
         />
+        <Plot
+        data={[
+          {
+            labels: pieChartData.labels,
+            values: pieChartData.values,
+            type: "bar",
+            orientation: "h"
+          },
+        ]}
+        layout={{ width: 400, height: 400, title: 'Pie Chart' }}
+          
+          />
     </div>
   );
 };
